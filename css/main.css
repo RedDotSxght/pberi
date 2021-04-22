@@ -1,0 +1,643 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+  /* cursor: none; */
+  cursor: crosshair;
+  transition: background 1s ease;
+}
+
+.outer-wrapper {
+  height: 100vw;
+  width: 100vh;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 600vw;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+}
+
+.slide {
+  width: 100vw;
+  height: 100vh;
+}
+
+.one,
+.three {
+  background-color: #282f40;
+}
+
+.two {
+  background-color: #eee;
+}
+
+.four {
+  background-color: #083632;
+  color: #e2e2e2;
+}
+
+.five {
+  background-color: #e2e2e2;
+}
+/* -----------------portfolio cover css----------------- */
+
+.cover {
+  background-color: #282f40;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tagline h2{
+  font-family: "Montserrat", sans-serif;
+  color: #e2e2e2;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: lighter;
+}
+
+#groupone {
+  animation: groupone 2s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes groupone {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+#grouptwo {
+  animation: grouptwo 2s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes grouptwo {
+  from {
+    transform: rotateZ(360deg);
+  }
+
+  to {
+    transform: rotateZ(0deg);
+  }
+}
+
+
+/* -----------------portfolio slide one css----------------- */
+
+.my-name {
+  margin: 0 auto;
+}
+
+.my-name h1 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  color: #f8c38a;
+  text-align: center;
+  font-size: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  background: url(../img/logo.svg);
+  background-size: cover;
+  height: 550px;
+  margin: -40px auto;
+}
+
+/* -----------------portfolio slide two css----------------- */
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 20px;
+}
+
+.top a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-decoration: none;
+  cursor: crosshair;
+}
+
+.top a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  background: #333;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.top a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.middle {
+  margin-top: 200px;
+}
+
+.middle h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 170px;
+  line-height: 25px;
+  text-transform: uppercase;
+  padding: 0;
+  color: #333;
+}
+
+.seperate-one {
+  margin-right: 30%;
+}
+
+.seperate-two {
+  margin-left: 30%;
+}
+
+.seperate-two-one {
+  margin: 0 auto;
+}
+
+/* -----------------portfolio slide three css----------------- */
+
+.content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2%;
+  margin-left: 7%;
+}
+
+.content h1 {
+  color: #e2e2e2;
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+  font-weight: 500;
+  text-align: left;
+  font-size: 30px;
+  line-height: 50px;
+  padding: 0;
+}
+
+.content h1:hover {
+  transition: all 1.5s ease-in-out;
+  color: #ffd700;
+}
+
+.seperate-three {
+  margin-left: 700px !important;
+  margin-top: 0px !important;
+  padding: 0px !important;
+}
+
+.link-me {
+  text-decoration: none;
+  color: #e2e2e2;
+  cursor: crosshair;
+}
+
+.link-me:hover {
+  transition: all 1.5s ease-in-out;
+  color: #f49d6e;
+}
+
+.seperate-four {
+  margin-left: 850px !important;
+}
+
+.link-two {
+  color: #e2e2e2;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  font-size: 80px;
+  text-decoration: none;
+  cursor: crosshair;
+  width: min-content;
+  margin: 0 auto;
+}
+
+.link-two:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  background: #e2e2e2;
+  transition: width 0.8s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.link-two:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+/* -----------------portfolio slide four css----------------- */
+
+.four-top {
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+  margin-top: 100px;
+  margin-left: 40px;
+}
+
+.hover-me {
+  margin: 0;
+  padding: 0;
+  width: 130px;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+
+.four-top img {
+  width: 400px;
+  height: 239px;
+  visibility: hidden;
+  padding: 0;
+  margin: -50px auto;
+}
+
+.four-top:hover img {
+  visibility: visible;
+}
+
+.hover-me-one {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #e2e2e2;
+  text-decoration: none;
+  margin: 50px auto;
+  cursor: crosshair;
+}
+
+.four-middle {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 800px;
+  margin-left: 40px;
+}
+
+.four-middle img {
+  width: 450px;
+  height: 239px;
+  visibility: hidden;
+  padding: 0;
+  margin: -50px auto;
+}
+
+.four-middle:hover img {
+  visibility: visible;
+}
+
+.four-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 800px;
+  margin-left: 40px;
+}
+
+.four-bottom img {
+  width: 450px;
+  height: 239px;
+  visibility: hidden;
+  padding: 0;
+  margin: -50px auto;
+}
+
+.four-bottom:hover img {
+  visibility: visible;
+}
+
+.hover-me-link {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #e2e2e2;
+  text-decoration: none;
+  cursor: crosshair;
+}
+
+/* -----------------portfolio slide five css----------------- */
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 800px;
+  margin: 18% auto;
+}
+
+.socials a {
+  font-size: 140px;
+  cursor: crosshair;
+  color: #333;
+}
+
+.socials section:first-of-type a:hover {
+  color: #2867b2;
+}
+
+.socials section:nth-child(2) a:hover {
+  color: #1da1f2;
+}
+
+.socials section:nth-child(3) a:hover {
+  color: #e95950;
+  color: rgb(233, 89, 80);
+}
+
+.socials section:last-of-type a:hover {
+  color: #db4437;
+  color: rgb(199, 22, 16);
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

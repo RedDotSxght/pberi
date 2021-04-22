@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Page Not Found</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+  <style>
+    * {
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    html {
+      color: #888;
+      display: table;
+      font-family: sans-serif;
+      height: 100%;
+      text-align: center;
+      width: 100%;
+    }
+
+    body {
+      cursor: crosshair;
+      transition: background 1s ease;
+      display: table-cell;
+      vertical-align: middle;
+      margin: 2em auto;
+      background-color: #282f40;
+    }
+
+    .error h1 {
+      color: #e2e2e2;
+      font-size: 10em;
+    }
+
+    .notfound h1 {
+      color: #e2e2e2;
+      font-size: 2em;
+      font-weight: 400;
+    }
+
+    .errorlink{
+      margin: 25px auto 0 auto;
+    }
+
+    .errorlink a{
+      color: #e2e2e2;
+      text-transform: capitalize;
+      text-decoration: underline;
+      cursor: crosshair;
+      font-size: 1.1rem;
+    }
+
+    
+#groupone {
+  animation: groupone 2s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes groupone {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+#grouptwo {
+  animation: grouptwo 2s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes grouptwo {
+  from {
+    transform: rotateZ(360deg);
+  }
+
+  to {
+    transform: rotateZ(0deg);
+  }
+}
+
+    @media only screen and (max-width: 280px) {
+
+      body,
+      p {
+        width: 95%;
+      }
+
+      h1 {
+        font-size: 1.5em;
+        margin: 0 0 0.3em;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="error"><h1>OOPS!!</h1></div>
+  <div class="notfound"><h1>404, Page Not Found</h1></div>
+  <div class="errorlink"><a href="index.html" target="_blank">home</a></div>
+  <div class="icon">
+    <svg width="1000" height="354" viewBox="0 0 556 354" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g id="error">
+      <g id="groupone">
+      <path id="Vector" d="M362 223C362 176.608 324.392 139 278 139C231.608 139 194 176.608 194 223C194 269.392 231.608 307 278 307C324.392 307 362 269.392 362 223Z" fill="#F8C38A"/>
+      <path id="Vector_2" d="M278 231C278 207.804 259.196 189 236 189C212.804 189 194 207.804 194 231C194 254.196 212.804 273 236 273C259.196 273 278 254.196 278 231Z" fill="#282F40"/>
+      </g>
+      <g id="grouptwo">
+      <path id="Vector_3" d="M131 117L131 307L171 307L171 117L131 117Z" fill="#F8C38A"/>
+      <path id="Vector_4" d="M17 46L17 216L57 216L57 46L17 46Z" fill="#F8C38A"/>
+      <path id="Vector_5" d="M17 216L171 216L171 176L17 176L17 216Z" fill="#F8C38A"/>
+      </g>
+      <g id="grouptwo">
+      <path id="Vector_6" d="M498 117L498 307L538 307L538 117L498 117Z" fill="#F8C38A"/>
+      <path id="Vector_7" d="M384 46L384 216L424 216L424 46L384 46Z" fill="#F8C38A"/>
+      <path id="Vector_8" d="M384 216L538 216L538 176L384 176L384 216Z" fill="#F8C38A"/>
+      </g>
+      </g>
+      </svg>           
+  </div>
+  
+</body>
+
+</html>
